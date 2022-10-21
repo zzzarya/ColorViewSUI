@@ -11,6 +11,8 @@
 		604A51992902FF0100613322 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A51982902FF0100613322 /* ContentView.swift */; };
 		604A519B2902FF0200613322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604A519A2902FF0200613322 /* Assets.xcassets */; };
 		604A519E2902FF0200613322 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604A519D2902FF0200613322 /* Preview Assets.xcassets */; };
+		604A51A52902FF6100613322 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A51A42902FF6100613322 /* MainView.swift */; };
+		604A51A7290305C900613322 /* SliderRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A51A6290305C900613322 /* SliderRGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		604A51982902FF0100613322 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		604A519A2902FF0200613322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		604A519D2902FF0200613322 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		604A51A42902FF6100613322 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		604A51A6290305C900613322 /* SliderRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRGB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				604A51962902FF0100613322 /* ColorViewSUIApp.swift */,
 				604A51982902FF0100613322 /* ContentView.swift */,
+				604A51A6290305C900613322 /* SliderRGB.swift */,
+				604A51A42902FF6100613322 /* MainView.swift */,
 				604A519A2902FF0200613322 /* Assets.xcassets */,
 				604A519C2902FF0200613322 /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604A51A7290305C900613322 /* SliderRGB.swift in Sources */,
 				604A51992902FF0100613322 /* ContentView.swift in Sources */,
+				604A51A52902FF6100613322 /* MainView.swift in Sources */,
 				604A51972902FF0100613322 /* ColorViewSUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
