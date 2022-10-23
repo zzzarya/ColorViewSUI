@@ -16,12 +16,14 @@ struct ContentView: View {
         ZStack {
             Color(.lightGray)
                 .ignoresSafeArea()
+            
             VStack {
                 MainView(redValue: redValue, greenValue: greenValue, blueValue: blueValue)
                 
                 SliderRGB(sliderColor: .red, sliderValue: $redValue)
                 SliderRGB(sliderColor: .green, sliderValue: $greenValue)
                 SliderRGB(sliderColor: .blue, sliderValue: $blueValue)
+                
                 Spacer()
             }.padding()
         }

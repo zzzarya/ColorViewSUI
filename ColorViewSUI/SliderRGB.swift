@@ -10,6 +10,7 @@ import SwiftUI
 struct SliderRGB: View {
     let sliderColor: Color
     @Binding var sliderValue: Double
+    @State private var alertPresented = false
     
     @State private var numberFormatter: NumberFormatter = {
         var nf = NumberFormatter()
@@ -26,10 +27,30 @@ struct SliderRGB: View {
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(sliderColor)
             
-            TextField(lround(sliderValue).formatted(), value: $sliderValue, formatter: numberFormatter)
-                .frame(width: 45)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .multilineTextAlignment(.center)
+            TextField(lround(sliderValue).formatted(),
+                      value: $sliderValue,
+                      formatter: numberFormatter,
+                      onCommit: {
+                checkTextField()
+            })
+            .frame(width: 45)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .multilineTextAlignment(.center)
+            .keyboardType(.numberPad)
+            
+            .alert(isPresented: $alertPresented,
+                   content: {
+                Alert(title: Text("Wrong Format"),
+                      message: Text("Please enter value from 0 to 255"),
+                      dismissButton: .cancel(Text("ОК")))
+            })
+        }
+    }
+    
+    private func checkTextField() {
+        if sliderValue > 255 {
+            alertPresented.toggle()
+            sliderValue = 0
         }
     }
 }
